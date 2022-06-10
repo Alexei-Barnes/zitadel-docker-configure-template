@@ -1,7 +1,7 @@
 
 # Zitadel Docker Build Template
 
-This repo contains a template to build a pre-configured Zitadel v2 docker image.  
+This repo contains a template to build a pre-configured [Zitadel](https://github.com/zitadel/zitadel) v2 docker image.  
 Please ensure that you follow the configuration in this readme, before running
 the build.
 
