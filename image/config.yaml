@@ -4,7 +4,6 @@ ExternalSecure: true
 
 DefaultInstance:
   InstanceName: <INSTANCE>
-  CustomDomain: <INSTANCE>.<DOMAIN>
   DefaultLanguage: en
   Org:
     Name: <ORG>
