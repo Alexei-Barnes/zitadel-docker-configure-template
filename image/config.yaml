@@ -1,0 +1,73 @@
+
+ExternalDomain: <DOMAIN>
+ExternalSecure: true
+
+DefaultInstance:
+  InstanceName: <INSTANCE>
+  CustomDomain: <INSTANCE>.<DOMAIN>
+  DefaultLanguage: en
+  Org:
+    Name: <ORG>
+    Human:
+      UserName: Admin
+      FirstName:
+      LastName:
+      NickName: Admin
+      DisplayName: Admin
+      Email:
+        Address: <ADMIN_EMAIL>
+        Verified: true
+      PreferredLanguage: en
+      Password: Password1!
+      PasswordChangeRequired: true
+
+Database:
+  Host: <DB_HOST>
+  Port: <DB_PORT>
+  Database: zitadel
+  MaxOpenConns: 20
+  MaxConnLifetime: 30m
+  MaxConnIdleTime: 30m
+  Options: <DB_OPTS>
+  User:
+    Username: zitadel
+    Password: <DB_PASS>
+    SSL:
+      Mode: verify-full
+      RootCert: /.zitadel/auth-ca.crt
+
+AdminUser:
+  Username: zitadel
+  Password: <DB_PASS>
+  SSL:
+    Mode: verify-full
+    RootCert: /.zitadel/auth-ca.crt
+
+# Uncomment this to modify how machine id is done.
+# E.G. If you're hosting on AWS or Azure.
+# Machine:
+#   Identification:
+#     PrivateIp:
+#       Enabled: false
+#     Hostname:
+#       Enabled: false
+#     Webhook:
+#       Enabled: true
+#       # AWS ECS v4 Configuration
+#       Url: "${ECS_CONTAINER_METADATA_URI_V4}"
+#       JPath: "$.DockerId"
+#       # Azure Configuration: https://docs.microsoft.com/en-us/azure/virtual-machines/windows/instance-metadata-service?tabs=linux
+#       Url: "http://169.254.169.254/metadata/instance?api-version=2021-02-01"
+#       JPath: "$.compute.vmId"
+
+# Uncomment this to get slower projection updates,
+# but lower idle DB usage.
+# Projections:
+#   RequeueEvery: 300s
+#   RetryFailedAfter: 2s
+#   MaxFailureCount: 5
+#   BulkLimit: 200
+#   MaxIterators: 1
+#   Customizations:
+#     projects:
+#       BulkLimit: 2000
