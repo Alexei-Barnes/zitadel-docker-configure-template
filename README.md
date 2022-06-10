@@ -40,7 +40,7 @@ configure for most setups. There are more options available in:
 [default.yaml](https://github.com/zitadel/zitadel/blob/v2-alpha/cmd/defaults.yaml)
 
 |Configuration                 |Description                                                                                                                                                             |
-|==============================|========================================================================================================================================================================|
+|------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |`ExternalDomain`              |The root domain to host the zitadel service under, for example `zitadel.ch`.                                                                                            |
 |`DefaultInstance`             |Zitadel is multi-tenant. This setting configures the default tenant.                                                                                                    |
 |`DefaultInstance.InstanceName`|The name of the default instance.                                                                                                                                       |
